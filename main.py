@@ -1,18 +1,20 @@
 import pygame
+import archetypes
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
 
+p1 = archetypes.player(600, 400)
+
 while running:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       running = False
 
-  screen.fill("purple")
+  p1.draw(screen)
+  screen.blit(screen, (0, 0))
 
   pygame.display.flip()
   clock.tick(60)
-  
-print("Hello World")
