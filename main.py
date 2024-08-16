@@ -14,7 +14,6 @@ while running:
       running = False
 
   p1.draw(screen)
-  screen.blit(screen, (0, 0))
 
   pygame.display.flip()
   clock.tick(60)
